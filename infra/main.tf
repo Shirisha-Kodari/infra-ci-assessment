@@ -15,8 +15,8 @@
 ## consumed remotely.
 
 module "vpc" {
-  source = "../modules/terraform-aws-vpc"
-  # source = "git::https://github.com/Shirisha-Kodari/terraform-aws-vpc.git?ref=main"
+  # source = "../modules/terraform-aws-vpc"
+  source = "git::https://github.com/Shirisha-Kodari/terraform-aws-vpc.git?ref=main"
 
   project_name           = var.project_name
   environment            = var.environment
@@ -35,8 +35,8 @@ module "vpc" {
 module "sg" {
   count = length(var.sg_names)
 
-  source = "../modules/terraform-aws-sg"
-  # source = "git::https://github.com/Shirisha-Kodari/terraform-aws-sg.git?ref=main"
+  # source = "../modules/terraform-aws-sg"
+  source = "git::https://github.com/Shirisha-Kodari/terraform-aws-sg.git?ref=main"
 
   project        = var.project_name
   environment    = var.environment
@@ -91,8 +91,8 @@ resource "aws_security_group_rule" "rds_from_ecs" {
 ## ---------------------------------------------------------------------------
 
 module "alb" {
-  source = "../modules/terraform-aws-alb"
-  # source = "git::https://github.com/Shirisha-Kodari/terraform-aws-alb.git?ref=main"
+  # source = "../modules/terraform-aws-alb"
+  source = "git::https://github.com/Shirisha-Kodari/terraform-aws-alb.git?ref=main"
 
   project_name      = var.project_name
   environment       = var.environment
@@ -109,8 +109,8 @@ module "alb" {
 ## ---------------------------------------------------------------------------
 
 module "rds" {
-  source = "../modules/terraform-aws-rds"
-  # source = "git::https://github.com/Shirisha-Kodari/terraform-aws-rds.git?ref=main"
+  # source = "../modules/terraform-aws-rds"
+  source = "git::https://github.com/Shirisha-Kodari/terraform-aws-rds.git?ref=main"
 
   project_name = var.project_name
   environment  = var.environment
@@ -139,8 +139,8 @@ module "rds" {
 ## ---------------------------------------------------------------------------
 
 module "ecs" {
-  source = "../modules/terraform-aws-ecs"
-  # source = "git::https://github.com/Shirisha-Kodari/terraform-aws-ecs.git?ref=main"
+  # source = "../modules/terraform-aws-ecs"
+  source = "git::https://github.com/Shirisha-Kodari/terraform-aws-ecs.git?ref=main"
 
   project_name = var.project_name
   environment  = var.environment
