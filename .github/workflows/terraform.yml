@@ -80,7 +80,7 @@ jobs:
       # the line below for:
       #   terraform init -backend-config="envs/${{ matrix.env }}/backend.tf" -input=false
       - name: Terraform Init
-        run: terraform init -backend=false -input=false
+        run: terraform init -backend-config="envs/${{ matrix.env }}/backend.tf" -input=false -reconfigure -upgrade
 
       - name: Terraform Validate
         run: terraform validate
