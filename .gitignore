@@ -1,0 +1,25 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Terraform lock file (comment out if you want to commit it)
+# .terraform.lock.hcl
+
+# CI plan artifacts (kept only as workflow artifacts, not committed)
+infra/tfplan
+infra/plan_output_*.txt
+
+# OS / editor
+.DS_Store
+*.swp
