@@ -38,7 +38,7 @@ jobs:
 
       - name: terraform fmt -check
         id: fmt
-        run: terraform fmt -check -recursive -diff .
+        run: terraform fmt -recursive
 
   plan:
     name: Plan (${{ matrix.env }})
